@@ -1,38 +1,40 @@
 import java.io.*;
+import java.util.ArrayList;
+import java.util.Scanner;
 
-public class NumberTester {
-    NumberTest oddTester;
-    NumberTest primeTester;
-    NumberTest palindromeTester;
+public class NumberTester
+{
+    private NumberTest oddTester;
+    private NumberTest primeTester;
+    private NumberTest palindromeTester;
+
 
     public NumberTester ( String fileName ) {
-        //datei
-        File file = new File(fileName);
+      try{
+          Scanner s = new Scanner(new File(fileName));
 
-        if (!file.canRead() || !file.isFile())
-            System.exit(0);
+          String firstline = s.nextLine();
 
-        BufferedReader in = null;
-        try {
-            in = new BufferedReader(new FileReader(fileName));
-            String zeile = null;
-            while ((zeile = in.readLine()) != null) {
-                System.out.println("Gelesene Zeile: " + zeile);
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            if (in != null)
-                try {
-                    in.close();
-                } catch (IOException e) {
-                }
-        }
+          for (int i = 0; i < Integer.parseInt(firstline); i++) {
+               String tonumber= s.nextLine();
+
+              String[] splitted = tonumber.split(" ");
+              int zahl1 =Integer.parseInt(splitted[0]);int zahl2 =Integer.parseInt(splitted[1]);
+
+
+          }
+          while(s.hasNext()){
+              System.out.println(s.nextLine());
+          }
+      } catch (FileNotFoundException e) {
+          e.printStackTrace();
+      }
 
 
     }
-    public void setOddEvenTester ( NumberTest oddTester ) {
-        this.oddTester = oddTester ;
+    public void setOddEvenTester ( NumberTest oddTester )
+    {
+        this.oddTester = oddTester;
     }
     public void setPrimeTester ( NumberTest primeTester ) {
         this.primeTester = primeTester ;
@@ -41,6 +43,9 @@ public class NumberTester {
         this.palindromeTester = palindromeTester ;
     }
     public void testFile ( ) {
-// TODO
+
+        NumberTest oddTester = (n) -> (n % 2) == 0;
+
+
     }
 }

@@ -5,13 +5,15 @@ public class HalloJavamitForEach {
 
     public static void main(String[] args) {
      List<String> para = new ArrayList<>();
-     para.add("first");para.add("second");para.add("3oderso");para.add("4oderso");
+     para.add("hallo");para.add("welt");
 
         for (String par: para) {
             System.out.println(par);
         }
 
-        //digga suizidgedanken
+        para.forEach(s -> System.out.println(s));
+        para.forEach(System.out::print);
+
     }
 
 }
