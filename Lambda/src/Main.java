@@ -121,6 +121,7 @@ public class Main {
 
     private static void aufgabe4()
     {
+        //Aufgabe 4:
         int i = 1;
         while(i != 4)
         {
@@ -328,6 +329,7 @@ public class Main {
     }
 
     public static void aufgabe3(){
+
         //AUFGABE 3
         NumberTester x = new NumberTester("LambdaText.txt");
         x.setOddEvenTester((n)->(n % 2) == 0);
