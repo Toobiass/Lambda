@@ -172,8 +172,6 @@ public class Main {
         CalculationOperation subtract = (n, m) ->
         {
             Number numb1 = new Number();
-
-            
             double calc1 = n.getA() - m.getA();
             numb1.setA(calc1);
 
