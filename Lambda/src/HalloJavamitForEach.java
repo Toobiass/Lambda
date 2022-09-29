@@ -3,17 +3,18 @@ import java.util.List;
 
 public class HalloJavamitForEach {
 
-    public static void main(String[] args) {
-     List<String> para = new ArrayList<>();
-     para.add("hallo");para.add("welt");
+    public  void halloj(){
+        List<String> para = new ArrayList<>();
+        para.add("hallo");para.add("welt");
 
         for (String par: para) {
-            System.out.println(par);
+            print(par);
         }
 
-        para.forEach(s -> System.out.println(s));
-        para.forEach(System.out::print);
+        para.forEach(s -> print(s));
 
     }
-
+    public  void print(String s){
+        System.out.println(s);
+    }
 }

@@ -1,5 +1,39 @@
+import java.util.Scanner;
+
 public class Main {
-    public static void main(String[] args) {
+    private static Number[] numbs = new Number[2];
+    public static void main(String[] args)
+    {
+        int i = 1;
+        while(i != 4)
+        {
+          //  menue_start();
+            Scanner s = new Scanner(System.in);
+            int input = Integer.parseInt(s.nextLine());
+
+            switch (input)
+            {
+                case 1:
+                    HalloJavamitForEach halloj  =  new HalloJavamitForEach();
+                    halloj.halloj();
+                    break;
+                case 2:
+                    aufgabe3();
+                    break;
+                case 3:
+                //    aufgabe4();
+                    break;
+                case 4:
+                    i = 4;
+            }
+            System.out.println("\n");
+        }
+
+    }
+
+
+    public static void aufgabe3(){
+        //AUFGABE 3
         NumberTester x = new NumberTester("LambdaText.txt");
         x.setOddEvenTester((n)->(n % 2) == 0);
         x.setPrimeTester((n)->{
@@ -30,4 +64,7 @@ public class Main {
 
         x.testFile();
     }
+
+
+
 }
