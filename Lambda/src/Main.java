@@ -158,15 +158,15 @@ public class Main {
     {
         CalculationOperation add = (n, m) ->
         {
-            Number added1 = new Number();
+            Number a1 = new Number();
 
             double calc1 = n.getA() + m.getA();
-            added1.setA(calc1);
+            a1.setA(calc1);
 
             double calc2 = n.getB() + m.getB();
-            added1.setB(calc2);
+            a1.setB(calc2);
 
-            return added1;
+            return a1;
         };
 
         CalculationOperation subtract = (n, m) ->
