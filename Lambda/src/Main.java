@@ -169,6 +169,7 @@ public class Main {
             return a1;
         };
 
+        
         CalculationOperation subtract = (n, m) ->
         {
             Number numb1 = new Number();
