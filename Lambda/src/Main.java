@@ -3,22 +3,30 @@ public class Main {
         NumberTester x = new NumberTester("LambdaText.txt");
         x.setOddEvenTester((n)->(n % 2) == 0);
         x.setPrimeTester((n)->{
-            boolean primzahl=true;
+            if(n == 1) return true;
 
-            while(n>0){
+            for(int i = 2; i<= n/2; i++){
+                if(n % i == 0){
+                    return true;
+                }
+            }
+            return false;
+        });
 
-                if(n%2==0){
-                    primzahl=false;
+        x.setPalindromeTester((n)->{
+            if(n > 9){
+                String forw = String.valueOf(n);
+                String backw = "";
+                for (int i = (forw.length()-1); i >=0; i--) {
+                    backw = backw + forw.charAt(i);
 
                 }
-                else if(n%3==0){
-                    primzahl=false;
-
-                }
-
-            }return primzahl;});
-
-        //x.setPalindromeTester((n)->(n % 2) == 0); //palindrometester
+                return forw.equals(backw);
+            }
+            else{
+                return false;
+            }
+        });
 
         x.testFile();
     }

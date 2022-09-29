@@ -31,24 +31,33 @@ public class NumberTester
 
                 String[] splitted = tonumber.split(" ");
                 int zahl1 =Integer.parseInt(splitted[0]);int zahl2 =Integer.parseInt(splitted[1]);
-                System.out.println(zahl1+"!"+zahl2);
 
                 switch (zahl1){
                     case 1:
                         if(oddTester.testNumber(zahl2)){
-                            System.out.println("ODD");
-                        }else{
                             System.out.println("EVEN");
+                        }else{
+                            System.out.println("ODD");
                         }
                         break;
                     case 2:
                         if(primeTester.testNumber(zahl2)){
-                            System.out.println("PRIME");
-                        }else{
+
+
                             System.out.println("NO PRIME");
+                        }else{
+
+                            System.out.println("PRIME");
                         }
                         break;
                     case 3:
+
+                        if(palindromeTester.testNumber(zahl2))
+                        {
+                            System.out.println("PALINDROME");
+                        }else{
+                            System.out.println("NO PALINDROME");
+                        }
                         break;
                 }
 
@@ -64,7 +73,7 @@ public class NumberTester
     }
     public NumberTester ( String fileName ) {
 
-this.fileName = fileName;
+        this.fileName = fileName;
 
     }
 
